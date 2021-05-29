@@ -24,3 +24,17 @@ whoAreYou("Omer") {(name: String) -> String in
     return "Hey, I am \(name)"
 } // Who are you? Hey, I am Omer
 
+// Shorthand parameters with different examples
+
+whoAreYou("Omer") { name -> String in
+    return "Hey, I am \(name)"
+} // Who are you? Hey, I am Omer
+
+whoAreYou("Omer") { name in
+    "Hey, I am \(name)"
+} // Who are you? Hey, I am Omer
+
+whoAreYou("Omer") { // The shortest
+    "Hey, I am \($0)"
+} // Who are you? Hey, I am Omer
+
