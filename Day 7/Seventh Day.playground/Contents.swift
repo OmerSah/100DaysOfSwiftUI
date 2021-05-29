@@ -51,8 +51,16 @@ whoAreYou(name: "Omer", age: 22) {
 
 // Returning a closure
 func goTo() -> (String) -> Void {
+    var counter = 1
     return {
-        print("You are going to \($0)")
+        print("\(counter). You are going to \($0)")
+        counter += 1
     }
 }
+// Capturing values and tracking closure calls
+let result = goTo()
+result("Istanbul") // 1. You are going to Istanbul
+result("Istanbul") // 2. You are going to Istanbul
+result("Istanbul") // 3. You are going to Istanbul
+
 
