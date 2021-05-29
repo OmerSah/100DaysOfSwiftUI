@@ -38,3 +38,21 @@ whoAreYou("Omer") { // The shortest
     "Hey, I am \($0)"
 } // Who are you? Hey, I am Omer
 
+// Multiple parameters
+func whoAreYou(name: String, age: Int, action: (String,Int) -> (String)) {
+    print("Who are you?")
+    let answer = action(name,age)
+    print(answer)
+}
+
+whoAreYou(name: "Omer", age: 22) {
+    "Hey, I am \($0) and I am \($1)"
+} // Who are you? Hey, I am Omer and I am 22
+
+// Returning a closure
+func goTo() -> (String) -> Void {
+    return {
+        print("You are going to \($0)")
+    }
+}
+
