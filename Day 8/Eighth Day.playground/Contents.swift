@@ -31,3 +31,19 @@ struct User {
 
 var user = User(name: "Omer", isItAdmin: true)
 print(user.authorityStatus) // Omer is an admin
+
+// didSet property Observer
+struct Reminder {
+    let event: String
+    var days: Int {
+        didSet {
+            print("\(days) days left to \(event)")
+        }
+    }
+}
+
+var reminder = Reminder(event: "Graduation", days: 25)
+reminder.days = 24 // 24 days left to Graduation
+reminder.days = 23 // 23 days left to Graduation
+reminder.days = 22 // 22 days left to Graduation
+reminder.days = 21 // 21 days left to Graduation
