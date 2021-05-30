@@ -47,3 +47,24 @@ reminder.days = 24 // 24 days left to Graduation
 reminder.days = 23 // 23 days left to Graduation
 reminder.days = 22 // 22 days left to Graduation
 reminder.days = 21 // 21 days left to Graduation
+
+// Structs with methods and mutating methods
+struct ElectricBill {
+    var kWh: Int
+    // Method
+    func calculateAmount() -> Int {
+        return kWh * 10
+    }
+    mutating func resetBill() {
+        kWh = 0
+    }
+}
+
+var bill = ElectricBill(kWh: 1_000)
+print(bill.calculateAmount()) // 10_000
+
+// Mutating methods are only used with variables not constants
+var Bill = ElectricBill(kWh: 100)
+print(Bill.calculateAmount()) // 1_000
+Bill.resetBill()
+print(Bill.calculateAmount()) // 0
