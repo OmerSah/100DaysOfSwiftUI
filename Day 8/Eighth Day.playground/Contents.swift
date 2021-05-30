@@ -68,3 +68,11 @@ var Bill = ElectricBill(kWh: 100)
 print(Bill.calculateAmount()) // 1_000
 Bill.resetBill()
 print(Bill.calculateAmount()) // 0
+
+// Properties and methods of strings
+var sentence: String = "Hey, this sentence is a test sentence"
+print(sentence.count) // 37
+// If string start with "Hey" return true
+print(sentence.hasPrefix("Hey")) // true
+print(sentence.uppercased()) // HEY ...
+print(sentence.sorted()) // , , , a c c ...
