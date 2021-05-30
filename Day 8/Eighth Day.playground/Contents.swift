@@ -76,3 +76,11 @@ print(sentence.count) // 37
 print(sentence.hasPrefix("Hey")) // true
 print(sentence.uppercased()) // HEY ...
 print(sentence.sorted()) // , , , a c c ...
+
+// Properties and methods of arrays
+var arr = [0, 3, 2, 4, 1]
+arr.append(5)
+arr.sorted() // 0 1 2 3 4 5
+arr.firstIndex(of: 5) // 5
+arr.remove(at: 0)
+arr.firstIndex(of: 5) // 4
