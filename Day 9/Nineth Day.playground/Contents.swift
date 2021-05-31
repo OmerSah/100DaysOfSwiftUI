@@ -40,3 +40,18 @@ struct CSStudent {
 var csStudent = CSStudent(name: "Omer") // Become an iOS Developer Omer
 csStudent.workExperience // Loading...
 
+// Static properties
+struct Student {
+    static var numberOfStudents: Int = 0
+    var name: String = "Omer"
+    // Every instance share same numberOfStudents
+    init(name: String) {
+        self.name = name
+        Student.numberOfStudents += 1
+    }
+}
+
+var s1 = Student(name: "Omer")
+var s2 = Student(name: "Faruk")
+var s3 = Student(name: "Sahin")
+print(Student.numberOfStudents) // 3
