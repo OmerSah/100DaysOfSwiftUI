@@ -19,3 +19,24 @@ struct User {
 
 var user = User(name: "Omer") // A user is created
 user.name = "Omer Faruk" // Your name is Omer Faruk
+
+// Lazy var
+struct WorkExperience {
+    init() {
+        print("Loading...")
+    }
+}
+struct CSStudent {
+    var name: String
+    // workExperience will be created only
+    // when it is first accessed
+    lazy var workExperience = WorkExperience()
+    init(name: String) {
+        print("Become an iOS Developer \(name)")
+        self.name = name
+    }
+}
+// No work experience
+var csStudent = CSStudent(name: "Omer") // Become an iOS Developer Omer
+csStudent.workExperience // Loading...
+
