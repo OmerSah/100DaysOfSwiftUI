@@ -9,12 +9,13 @@ struct User {
             print("Your name is \(name)")
         }
     }
-    // Initializer with no parameters
-    init() {
-        name = "Unknown"
+    // Initializer with name parameter
+    init(name: String) {
+        // self refers to name property
+        self.name = name
         print("A user is created")
     }
 }
 
-var user = User() // A user is created
-user.name = "Omer" // Your name is Omer
+var user = User(name: "Omer") // A user is created
+user.name = "Omer Faruk" // Your name is Omer Faruk
