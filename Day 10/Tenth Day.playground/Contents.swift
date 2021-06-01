@@ -36,3 +36,16 @@ var sciFiBook = SciFi(name: "Dune")
 print(sciFiBook.genre) // SciFi
 print(sciFiBook.name) // Dune
 sciFiBook.printType() // Hey, this is a book. This is a SciFi book.
+
+// final keyword does not allow inheritance
+
+// This class can not be inherited
+final class Student {
+    var name: String
+    let id: Int
+    init(id: Int, name: String) {
+        self.id = id
+        self.name = name
+    }
+}
+
