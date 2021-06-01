@@ -4,15 +4,26 @@ import UIKit
 
 // Classes must have an initializer
 // Classes do not have memberwise initializer
-class Student {
-    let id: String
+class Book {
+    let genre: String
     var name: String
-    init(name: String, id: String) {
+    init(name: String, genre: String) {
         self.name = name
-        self.id = id
+        self.genre = genre
     }
 }
 
-var student = Student(name: "Omer", id: "1")
-print(student.id) // 1
-print(student.name) // Omer
+var book = Book(name: "Hobbit", genre: "Fantasy")
+print(book.genre) // Fantasy
+print(book.name) // Hobbit
+
+// Class inheritance
+class SciFi: Book {
+    init(name: String) {
+        super.init(name: name, genre: "SciFi")
+    }
+}
+
+var sciFiBook = SciFi(name: "Dune")
+print(sciFiBook.genre) // SciFi
+print(sciFiBook.name) // Dune
