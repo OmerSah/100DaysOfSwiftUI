@@ -75,3 +75,22 @@ print(musician.name) // Roger Waters
 var musicianCopy = musician
 musicianCopy.name = "Jimmy Page"
 print(musician.name) // Jimmy Page
+
+// Deinitializers
+class Romance: Book {
+    init(name: String) {
+        super.init(name: name, genre: "Romance")
+    }
+    override func printType() {
+        print("This is a Romance book")
+    }
+    deinit {
+        print("\(name) is destroyed.")
+    }
+}
+// Call deinitializer every time
+for _ in 1...3 {
+    // Pride and Prejudice is destroyed
+    let romance = Romance(name: "Pride and Prejudice")
+    romance.printType() // This is a Romance book
+}
