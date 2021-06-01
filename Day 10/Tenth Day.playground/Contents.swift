@@ -48,4 +48,30 @@ final class Student {
         self.name = name
     }
 }
+// Copying structs and classes
+struct Singer {
+    var name: String
+}
 
+class Musician {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+// Copy and original structs are different variables
+// Changes do not affect each other
+var singer = Singer(name: "Pink Floyd")
+print(singer.name) // Pink Floyd
+var singerCopy = singer
+singerCopy.name = "Led Zeppelin"
+print(singer.name) // Pink Floyd
+
+// Copy and original musician points the same object in memory
+// Changes affect both of them
+var musician = Musician(name: "Roger Waters")
+print(musician.name) // Roger Waters
+var musicianCopy = musician
+musicianCopy.name = "Jimmy Page"
+print(musician.name) // Jimmy Page
