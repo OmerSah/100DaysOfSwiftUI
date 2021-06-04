@@ -18,3 +18,12 @@ func displayID(thing: Identifiable) {
 
 var user = User(id: "1")
 displayID(thing: user)
+
+// Extensions
+extension Int {
+    func squared() -> Int {
+        return self * self
+    }
+}
+let number = 8
+number.squared() // 64
