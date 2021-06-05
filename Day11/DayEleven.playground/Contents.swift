@@ -27,3 +27,42 @@ extension Int {
 }
 let number = 8
 number.squared() // 64
+
+// Protocol inheritance
+protocol Payable {
+    func calculateWages() -> Int
+}
+
+protocol NeedsTraining {
+    func study()
+}
+
+protocol HasVacation {
+    func takeVacation(days: Int)
+}
+
+protocol Employee: Payable, NeedsTraining, HasVacation {
+    var name: String { get set }
+}
+
+struct Staff: Employee {
+    var name: String
+    
+    func calculateWages() -> Int {
+        return self.name.count * 1000
+    }
+    
+    func study() {
+        print("Studying...")
+    }
+    
+    func takeVacation(days: Int) {
+        print("Have \(days) days of vacation")
+    }
+}
+
+var newStaff = Staff(name: "Omer")
+newStaff.calculateWages() // 4000
+newStaff.study() // Studying
+newStaff.takeVacation(days: 30) // Have 30 days of vacation
+
