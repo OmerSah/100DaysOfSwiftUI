@@ -66,3 +66,16 @@ newStaff.calculateWages() // 4000
 newStaff.study() // Studying
 newStaff.takeVacation(days: 30) // Have 30 days of vacation
 
+// Sets or array adopt a protocol named Collection
+extension Collection {
+    func howManyElements() {
+        print("There are \(count) elements. They are: ")
+        
+        for name in self {
+            print(name)
+        }
+    }
+}
+
+var family = Set(["Omer","Mustafa","Dilara","Fadime"])
+family.howManyElements()
