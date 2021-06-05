@@ -5,6 +5,14 @@ import UIKit
 // Protocol example
 protocol Identifiable {
     var id: String { get set }
+    func Identify()
+}
+
+// Protocol extension for a default method
+extension Identifiable {
+    func Identify() {
+        print("Your id is \(self.id)")
+    }
 }
 
 // Have to add id variable
