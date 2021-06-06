@@ -13,3 +13,17 @@ if let unwrapped = name {
 } else {
     print("Name not found")
 } // Name not found
+
+// Guard let
+// Unwrapped value remains after guard
+// Can break the loop, function or condition
+func sayHello(_ name: String?) {
+    guard let unwrapped = name else {
+        print("Your name is null")
+        return
+    }
+    
+    print("Hello \(unwrapped)") // Can usable after guard
+}
+name = "Omer"
+sayHello(name) // Hello Omer
