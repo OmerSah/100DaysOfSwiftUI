@@ -27,3 +27,7 @@ func sayHello(_ name: String?) {
 }
 name = "Omer"
 sayHello(name) // Hello Omer
+
+// Force unwrapping with !
+var number: String = "5"
+var num = Int(number)! // num is an optional integer // 5
