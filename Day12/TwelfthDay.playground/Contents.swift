@@ -31,3 +31,19 @@ sayHello(name) // Hello Omer
 // Force unwrapping with !
 var number: String = "5"
 var num = Int(number)! // num is an optional integer // 5
+
+// Implicitly unwrapping
+// Do not need to use if let or guard let
+var value: Int! = nil
+print(value) // nil
+
+// Nil coalescing
+func howOld(_ age: Int) -> String? {
+    if age < 150 && age > 0 {
+        return "You are \(age)"
+    } else {
+        return nil
+    }
+}
+var sayMyAge = howOld(195) ?? "Invalid" // Default value for nil
+print(sayMyAge) // Invalid
