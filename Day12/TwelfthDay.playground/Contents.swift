@@ -75,3 +75,19 @@ if let result = try? checkPassword("password") {
 // If value is nil then it will crash
 try! checkPassword("123456") // Does not throw an error
 print("OK") // OK
+
+// Failable initializer
+class User {
+    var id: Int
+    
+    init?(ID: String) {
+        if let userID = Int(ID) {
+            self.id = userID
+        } else {
+            return nil
+        }
+    }
+}
+// ID takes a string but must be a integer value
+var newUser = User(ID: "Omer") // Initializer will failed
+print(newUser?.id ?? "It is not valid") // It is not valid
