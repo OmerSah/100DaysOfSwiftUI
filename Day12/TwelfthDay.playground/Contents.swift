@@ -53,3 +53,25 @@ print(sayMyAge) // Invalid
 let lectures = ["Science", "Math", "History"]
 var str = lectures.first?.uppercased()
 print(str!) // SCIENCE // (Force unwrapped)
+
+// Optional try
+enum PasswordError: Error {
+    case obvious
+}
+
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+    return true
+}
+// A short way to use try
+if let result = try? checkPassword("password") {
+    print("Hey, your password is \(result)")
+} else {
+    print("It is so obvious")
+} // It is so obvious
+
+// If value is nil then it will crash
+try! checkPassword("123456") // Does not throw an error
+print("OK") // OK
