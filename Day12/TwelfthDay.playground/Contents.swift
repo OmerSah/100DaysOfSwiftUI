@@ -47,3 +47,9 @@ func howOld(_ age: Int) -> String? {
 }
 var sayMyAge = howOld(195) ?? "Invalid" // Default value for nil
 print(sayMyAge) // Invalid
+
+// Optional chaining
+// If the value is nil then ignore rest of them
+let lectures = ["Science", "Math", "History"]
+var str = lectures.first?.uppercased()
+print(str!) // SCIENCE // (Force unwrapped)
