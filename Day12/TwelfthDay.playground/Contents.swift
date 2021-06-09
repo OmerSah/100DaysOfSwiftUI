@@ -91,3 +91,25 @@ class User {
 // ID takes a string but must be a integer value
 var newUser = User(ID: "Omer") // Initializer will failed
 print(newUser?.id ?? "It is not valid") // It is not valid
+
+// Typecasting
+class Staff {
+    var id: Int = 0
+    init(_ id: Int) {
+        self.id += id
+    }
+}
+class Student: Staff {
+    func whichGrade() -> Int {
+        return Int.random(in: 0...12)
+    }
+}
+class Teacher: Staff { }
+
+var academicStaff = [Student(1), Teacher(2), Student(3), Teacher(4)]
+
+for person in academicStaff {
+    if let student = person as? Student {
+        print("ID is \(student.id), Grade is \(student.whichGrade())")
+    }
+} // Print id and grade if person is student
