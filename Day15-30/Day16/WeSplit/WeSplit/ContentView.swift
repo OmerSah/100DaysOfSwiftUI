@@ -10,23 +10,24 @@ import SwiftUI
 struct ContentView: View {
     @State private var tapCount = 0
     @State private var userInput = ""
+    let lessons = ["Science", "Math", "CS"]
+    @State private var selectedLesson = 0
     var body: some View {
         NavigationView {
             Form {
                 Group {
-                    Text("Hello, world!")
-                        .padding()
-                    Text("Hello, world!")
-                        .padding()
-                    Text("Hello, world!")
-                        .padding()
+                    ForEach(0 ..< 5) {
+                        Text("Row: \($0)")
+                    }
                 }
                 
                 Section {
-                    Text("Hello, world!")
-                        .padding()
-                    Text("Hello, world!")
-                        .padding()
+                    Picker("Choose your lesson", selection: $selectedLesson) {
+                        ForEach(0 ..< lessons.count) {
+                            Text(self.lessons[$0])
+                        }
+                    }
+                    Text("Selected: \(lessons[selectedLesson])")
                 }
                 
                 Button("Tap Count \(tapCount)") {
@@ -41,8 +42,6 @@ struct ContentView: View {
             .navigationBarTitle(Text("SwiftUI"), displayMode: .inline)
             // .navigationBarTitle("SwiftUI")
         }
-        
-       
     }
 }
 
