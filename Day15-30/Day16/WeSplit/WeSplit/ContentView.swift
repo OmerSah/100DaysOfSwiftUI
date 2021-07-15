@@ -9,36 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Form {
-            Group {
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
+        NavigationView {
+            Form {
+                Group {
+                    Text("Hello, world!")
+                        .padding()
+                    Text("Hello, world!")
+                        .padding()
+                    Text("Hello, world!")
+                        .padding()
+                }
+                
+                Section {
+                    Text("Hello, world!")
+                        .padding()
+                    Text("Hello, world!")
+                        .padding()
+                }
+                
+                Section {
+                    Text("Hello, world!")
+                        .padding()
+                    Text("Hello, world!")
+                        .padding()
+                }
             }
-            
-            Section {
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-            }
-            
-            Section {
-                Text("Hello, world!")
-                    .padding()
-                Text("Hello, world!")
-                    .padding()
-            }
-            
+            .navigationBarTitle(Text("SwiftUI"), displayMode: .inline)
+            // .navigationBarTitle("SwiftUI")
         }
     }
 }
