@@ -27,9 +27,15 @@ struct ContentView: View {
                             Text("\($0) people")
                         }
                     }
-                    
-                    Text("\(numberOfPeople + 2)")
                 }
+                
+                Section(header: Text("Please enter your tip percentage")) {
+                    Picker("Tip Percentage", selection: $tipPercentage) {
+                        ForEach(0 ..< percentages.count) {
+                            Text("\(self.percentages[$0])")
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }.textCase(nil)
                 
                 Section {
                     Text("$\(amountChecked)")
