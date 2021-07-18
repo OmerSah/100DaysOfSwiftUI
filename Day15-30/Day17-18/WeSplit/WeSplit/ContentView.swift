@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var amountChecked = ""
     // Default value is 2(we can split into 2 min)
-    @State private var numberOfPeople = 2
+    @State private var numberOfPeople = ""
     // Index number
     @State private var tipPercentage = 0
     
@@ -19,22 +19,27 @@ struct ContentView: View {
     var amountPerPerson: Double {
         let totalPercentage: Double = 1 + Double(percentages[tipPercentage]) / 100
         let amount = (Double(amountChecked) ?? 0) * totalPercentage
-        let result = amount / Double(numberOfPeople + 2)
+        let peopleCount = (Double(numberOfPeople) ?? 0)
         
-        return result
+        if peopleCount == 0 {return 0}
+        
+        return amount / peopleCount
+    }
+    
+    var totalAmount: Double {
+        let totalPercentage: Double = 1 + Double(percentages[tipPercentage]) / 100
+        let amount = (Double(amountChecked) ?? 0) * totalPercentage
+        
+        return amount
     }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount: ", text: $amountChecked).keyboardType(.decimalPad)
+                    TextField("Amount", text: $amountChecked).keyboardType(.decimalPad)
                     
-                    Picker("Number of People", selection: $numberOfPeople) {
-                        ForEach(2 ..< 100) {
-                            Text("\($0) people")
-                        }
-                    }
+                    TextField("Number of People", text: $numberOfPeople).keyboardType(.numberPad)
                 }
                 
                 Section(header: Text("Please enter your tip percentage")) {
@@ -45,9 +50,13 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                 }.textCase(nil)
                 
-                Section {
+                Section(header: Text("Amount per person")) {
                     Text("$\(amountPerPerson, specifier: "%.2f")")
-                }
+                }.textCase(nil)
+                
+                Section(header: Text("Total amount")) {
+                    Text("$\(totalAmount, specifier: "%.2f")")
+                }.textCase(nil)
             }
             .navigationBarTitle("WeSplit")
         }
