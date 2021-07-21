@@ -9,23 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 50) {
-            HStack(spacing: 50) {
-                Text("O")
-                Text("O")
-                Text("O")
-            }
-            HStack(spacing: 50) {
-                Text("O")
-                Text("O")
-                Text("O")
-            }
-            HStack(spacing: 50) {
-                Text("O")
-                Text("O")
-                Text("O")
+        ZStack {
+            // Ignore safe areas
+            Color.green.ignoresSafeArea()
+            VStack(spacing: 50) {
+                ZStack {
+                    // Customized color with specified frame
+                    Color(red: 0.5, green: 0.3, blue: 0.6).frame(width: 200, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    HStack(spacing: 50) {
+                        Text("O")
+                        Text("O")
+                        Text("O")
+                    }
+                }
+                HStack(spacing: 50) {
+                    Text("O")
+                    Text("O")
+                    Text("O")
+                }.background(Color.red)
+                HStack(spacing: 50) {
+                    Text("O")
+                    Text("O")
+                    Text("O")
+                }.background(Color.blue.frame(width: 200,height: 100))
             }
         }
+        
     }
 }
 
