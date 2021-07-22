@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue, Color.white]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             VStack(spacing: 50) {
                 ZStack {
                     // Customized color and radial gradient with specified frame
@@ -33,6 +33,16 @@ struct ContentView: View {
                     Text("O")
                     Text("O")
                 }.background(Color.blue.frame(width: 200,height: 50))
+                
+                Button(action: {
+                    print("Smiley button is tapped!")
+                }, label: {
+                    HStack(spacing: 10) {
+                        // decorative keyword to not read from screenreader for images
+                        Image(systemName: "smiley")
+                        Text("You can tap here!")
+                    }
+                })
             }
         }
         
