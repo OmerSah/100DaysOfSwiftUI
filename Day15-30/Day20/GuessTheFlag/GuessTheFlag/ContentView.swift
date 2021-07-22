@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var alertStatus = false
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
@@ -36,13 +38,20 @@ struct ContentView: View {
                 
                 Button(action: {
                     print("Smiley button is tapped!")
+                    self.alertStatus = true
                 }, label: {
                     HStack(spacing: 10) {
                         // decorative keyword to not read from screenreader for images
                         Image(systemName: "smiley")
                         Text("You can tap here!")
                     }
+                }).alert(isPresented: $alertStatus, content: {
+                    Alert(title: Text("SwiftUI Alerts"), message: Text("This is an alert!"), dismissButton: .default(Text("OK")))
                 })
+                
+                
+                
+                
             }
         }
         
