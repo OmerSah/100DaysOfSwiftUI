@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA52FF4B26A76EA700335F80 /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52FF4A26A76EA700335F80 /* GuessTheFlagApp.swift */; };
-		BA52FF4D26A76EA700335F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52FF4C26A76EA700335F80 /* ContentView.swift */; };
-		BA52FF4F26A76EA800335F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA52FF4E26A76EA800335F80 /* Assets.xcassets */; };
-		BA52FF5226A76EA800335F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA52FF5126A76EA800335F80 /* Preview Assets.xcassets */; };
+		BA988B9526AF3D480038B959 /* ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA988B9426AF3D480038B959 /* ChallengeApp.swift */; };
+		BA988B9726AF3D480038B959 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA988B9626AF3D480038B959 /* ContentView.swift */; };
+		BA988B9926AF3D490038B959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA988B9826AF3D490038B959 /* Assets.xcassets */; };
+		BA988B9C26AF3D490038B959 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA988B9B26AF3D490038B959 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA52FF4726A76EA700335F80 /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA52FF4A26A76EA700335F80 /* GuessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagApp.swift; sourceTree = "<group>"; };
-		BA52FF4C26A76EA700335F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BA52FF4E26A76EA800335F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA52FF5126A76EA800335F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BA52FF5326A76EA800335F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA988B9126AF3D480038B959 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA988B9426AF3D480038B959 /* ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeApp.swift; sourceTree = "<group>"; };
+		BA988B9626AF3D480038B959 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA988B9826AF3D490038B959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA988B9B26AF3D490038B959 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA988B9D26AF3D490038B959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BA52FF4426A76EA700335F80 /* Frameworks */ = {
+		BA988B8E26AF3D480038B959 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA52FF3E26A76EA700335F80 = {
+		BA988B8826AF3D480038B959 = {
 			isa = PBXGroup;
 			children = (
-				BA52FF4926A76EA700335F80 /* GuessTheFlag */,
-				BA52FF4826A76EA700335F80 /* Products */,
+				BA988B9326AF3D480038B959 /* Challenge */,
+				BA988B9226AF3D480038B959 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BA52FF4826A76EA700335F80 /* Products */ = {
+		BA988B9226AF3D480038B959 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA52FF4726A76EA700335F80 /* GuessTheFlag.app */,
+				BA988B9126AF3D480038B959 /* Challenge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA52FF4926A76EA700335F80 /* GuessTheFlag */ = {
+		BA988B9326AF3D480038B959 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				BA52FF4A26A76EA700335F80 /* GuessTheFlagApp.swift */,
-				BA52FF4C26A76EA700335F80 /* ContentView.swift */,
-				BA52FF4E26A76EA800335F80 /* Assets.xcassets */,
-				BA52FF5326A76EA800335F80 /* Info.plist */,
-				BA52FF5026A76EA800335F80 /* Preview Content */,
+				BA988B9426AF3D480038B959 /* ChallengeApp.swift */,
+				BA988B9626AF3D480038B959 /* ContentView.swift */,
+				BA988B9826AF3D490038B959 /* Assets.xcassets */,
+				BA988B9D26AF3D490038B959 /* Info.plist */,
+				BA988B9A26AF3D490038B959 /* Preview Content */,
 			);
-			path = GuessTheFlag;
+			path = Challenge;
 			sourceTree = "<group>";
 		};
-		BA52FF5026A76EA800335F80 /* Preview Content */ = {
+		BA988B9A26AF3D490038B959 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BA52FF5126A76EA800335F80 /* Preview Assets.xcassets */,
+				BA988B9B26AF3D490038B959 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,38 +72,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA52FF4626A76EA700335F80 /* GuessTheFlag */ = {
+		BA988B9026AF3D480038B959 /* Challenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA52FF5626A76EA800335F80 /* Build configuration list for PBXNativeTarget "GuessTheFlag" */;
+			buildConfigurationList = BA988BA026AF3D490038B959 /* Build configuration list for PBXNativeTarget "Challenge" */;
 			buildPhases = (
-				BA52FF4326A76EA700335F80 /* Sources */,
-				BA52FF4426A76EA700335F80 /* Frameworks */,
-				BA52FF4526A76EA700335F80 /* Resources */,
+				BA988B8D26AF3D480038B959 /* Sources */,
+				BA988B8E26AF3D480038B959 /* Frameworks */,
+				BA988B8F26AF3D480038B959 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GuessTheFlag;
-			productName = GuessTheFlag;
-			productReference = BA52FF4726A76EA700335F80 /* GuessTheFlag.app */;
+			name = Challenge;
+			productName = Challenge;
+			productReference = BA988B9126AF3D480038B959 /* Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BA52FF3F26A76EA700335F80 /* Project object */ = {
+		BA988B8926AF3D480038B959 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					BA52FF4626A76EA700335F80 = {
+					BA988B9026AF3D480038B959 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = BA52FF4226A76EA700335F80 /* Build configuration list for PBXProject "GuessTheFlag" */;
+			buildConfigurationList = BA988B8C26AF3D480038B959 /* Build configuration list for PBXProject "Challenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,42 +111,42 @@
 				en,
 				Base,
 			);
-			mainGroup = BA52FF3E26A76EA700335F80;
-			productRefGroup = BA52FF4826A76EA700335F80 /* Products */;
+			mainGroup = BA988B8826AF3D480038B959;
+			productRefGroup = BA988B9226AF3D480038B959 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA52FF4626A76EA700335F80 /* GuessTheFlag */,
+				BA988B9026AF3D480038B959 /* Challenge */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BA52FF4526A76EA700335F80 /* Resources */ = {
+		BA988B8F26AF3D480038B959 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA52FF5226A76EA800335F80 /* Preview Assets.xcassets in Resources */,
-				BA52FF4F26A76EA800335F80 /* Assets.xcassets in Resources */,
+				BA988B9C26AF3D490038B959 /* Preview Assets.xcassets in Resources */,
+				BA988B9926AF3D490038B959 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BA52FF4326A76EA700335F80 /* Sources */ = {
+		BA988B8D26AF3D480038B959 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA52FF4D26A76EA700335F80 /* ContentView.swift in Sources */,
-				BA52FF4B26A76EA700335F80 /* GuessTheFlagApp.swift in Sources */,
+				BA988B9726AF3D480038B959 /* ContentView.swift in Sources */,
+				BA988B9526AF3D480038B959 /* ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BA52FF5426A76EA800335F80 /* Debug */ = {
+		BA988B9E26AF3D490038B959 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		BA52FF5526A76EA800335F80 /* Release */ = {
+		BA988B9F26AF3D490038B959 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,44 +262,42 @@
 			};
 			name = Release;
 		};
-		BA52FF5726A76EA800335F80 /* Debug */ = {
+		BA988BA126AF3D490038B959 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessTheFlag/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_ASSET_PATHS = "\"Challenge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GuessTheFlag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				INFOPLIST_FILE = Challenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.omer.sahin.GuessTheFlag;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omer.sahin.Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BA52FF5826A76EA800335F80 /* Release */ = {
+		BA988BA226AF3D490038B959 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessTheFlag/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_ASSET_PATHS = "\"Challenge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GuessTheFlag/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				INFOPLIST_FILE = Challenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.omer.sahin.GuessTheFlag;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omer.sahin.Challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,25 +307,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA52FF4226A76EA700335F80 /* Build configuration list for PBXProject "GuessTheFlag" */ = {
+		BA988B8C26AF3D480038B959 /* Build configuration list for PBXProject "Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA52FF5426A76EA800335F80 /* Debug */,
-				BA52FF5526A76EA800335F80 /* Release */,
+				BA988B9E26AF3D490038B959 /* Debug */,
+				BA988B9F26AF3D490038B959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA52FF5626A76EA800335F80 /* Build configuration list for PBXNativeTarget "GuessTheFlag" */ = {
+		BA988BA026AF3D490038B959 /* Build configuration list for PBXNativeTarget "Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA52FF5726A76EA800335F80 /* Debug */,
-				BA52FF5826A76EA800335F80 /* Release */,
+				BA988BA126AF3D490038B959 /* Debug */,
+				BA988BA226AF3D490038B959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BA52FF3F26A76EA700335F80 /* Project object */;
+	rootObject = BA988B8926AF3D480038B959 /* Project object */;
 }
