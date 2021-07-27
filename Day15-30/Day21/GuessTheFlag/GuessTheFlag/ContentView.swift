@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct FlagImage: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            // For shape
+            .clipShape(Capsule())
+            // For border
+            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+            // For shadow
+            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 5)
+    }
+}
+
+extension View {
+    func flagImage() -> some View {
+        self.modifier(FlagImage())
+    }
+}
+
 struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0 ... 2)
@@ -33,12 +51,7 @@ struct ContentView: View {
                         self.flagTapped(number)
                     }, label: {
                         Image(self.countries[number]).renderingMode(.original)
-                            // For shape
-                            .clipShape(Capsule())
-                            // For border
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            // For shadow
-                            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 5)
+                            .flagImage()
                     })
                 }
                 

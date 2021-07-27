@@ -33,6 +33,14 @@ struct ContentView: View {
         return amount
     }
     
+    var isTipZero: Bool {
+        if tipPercentage == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -54,7 +62,7 @@ struct ContentView: View {
                     Text("$\(amountPerPerson, specifier: "%.2f")")
                 }.textCase(nil)
                 
-                Section(header: Text("Total amount")) {
+                Section(header: Text("Total amount").foregroundColor(isTipZero ? .red : .none)) {
                     Text("$\(totalAmount, specifier: "%.2f")")
                 }.textCase(nil)
             }

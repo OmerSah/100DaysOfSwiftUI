@@ -7,10 +7,33 @@
 
 import SwiftUI
 
+struct CustomTitle: ViewModifier {
+    var text: String
+    
+    func body(content: Content) -> some View {
+        VStack {
+            Text(text)
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+            content
+        }
+    }
+}
+
+extension View {
+    func customTitle(text: String) -> some View {
+        self.modifier(CustomTitle(text: text))
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello, world!")
+                .padding()
+                .customTitle(text: "Custom Title")
+                
+        }
     }
 }
 
